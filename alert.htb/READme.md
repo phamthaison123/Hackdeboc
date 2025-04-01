@@ -7,7 +7,7 @@
 ```
 nmap -sCV -Pn 10.10.11.44 -oA nmap/output
 ```
-```
+<pre style="border: 1px solid #ccc; padding: 10px; border-radius: 5px;">
 nmap -p$ports -sC -sV 10.10.11.44
 Starting Nmap 7.95 ( https://nmap.org ) at 2025-03-18 06:45 EDT
 Nmap scan report for 10.10.11.44
@@ -31,4 +31,4 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 Service detection performed. Please report any incorrect results at
 https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 13.58 seconds
-```
+</pre>
