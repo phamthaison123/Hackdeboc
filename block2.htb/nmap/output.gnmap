@@ -1,0 +1,4 @@
+# Nmap 7.95 scan initiated Wed Apr  2 09:42:35 2025 as: /usr/lib/nmap/nmap --privileged -p- --min-rate=1000 -sC -sV -Pn -oA nmap/output 10.10.11.43
+Host: 10.10.11.43 ()	Status: Up
+Host: 10.10.11.43 ()	Ports: 22/open/tcp//ssh//OpenSSH 9.7 (protocol 2.0)/, 80/open/tcp//http//Werkzeug httpd 3.0.3 (Python 3.12.3)/, 8545/open/tcp//http//Werkzeug httpd 3.0.3 (Python 3.12.3)/
+# Nmap done at Wed Apr  2 09:46:05 2025 -- 1 IP address (1 host up) scanned in 210.41 seconds
