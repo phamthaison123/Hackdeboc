@@ -1,0 +1,70 @@
+# Nmap 7.94SVN scan initiated Mon Jun 16 13:49:52 2025 as: nmap -sCV -nP -vv -oA nmap/output backfire.htb
+Nmap scan report for backfire.htb (10.10.11.49)
+Host is up, received echo-reply ttl 63 (0.20s latency).
+Scanned at 2025-06-16 13:49:53 +07 for 28s
+Not shown: 996 closed tcp ports (reset)
+PORT     STATE    SERVICE  REASON              VERSION
+22/tcp   open     ssh      syn-ack ttl 63      OpenSSH 9.2p1 Debian 2+deb12u4 (protocol 2.0)
+| ssh-hostkey: 
+|   256 7d:6b:ba:b6:25:48:77:ac:3a:a2:ef:ae:f5:1d:98:c4 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJuxaL9aCVxiQGLRxQPezW3dkgouskvb/BcBJR16VYjHElq7F8C2ByzUTNr0OMeiwft8X5vJaD9GBqoEul4D1QE=
+|   256 be:f3:27:9e:c6:d6:29:27:7b:98:18:91:4e:97:25:99 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA2oT7Hn4aUiSdg4vO9rJIbVSVKcOVKozd838ZStpwj8
+443/tcp  open     ssl/http syn-ack ttl 63      nginx 1.22.1
+|_http-server-header: nginx/1.22.1
+|_http-title: 404 Not Found
+| tls-alpn: 
+|   http/1.1
+|   http/1.0
+|_  http/0.9
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=127.0.0.1/organizationName=DEBUG INC/stateOrProvinceName=Colorado/countryName=US/streetAddress=/postalCode=1814/localityName=Denver
+| Subject Alternative Name: IP Address:127.0.0.1
+| Issuer: commonName=127.0.0.1/organizationName=DEBUG INC/stateOrProvinceName=Colorado/countryName=US/streetAddress=/postalCode=1814/localityName=Denver
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2025-05-28T03:23:57
+| Not valid after:  2028-05-27T03:23:57
+| MD5:   5305:d8e4:8ace:ee35:c76f:4271:d38c:722e
+| SHA-1: f6c4:d719:ca58:4a16:db87:9c90:19a5:6a22:4e6e:211d
+| -----BEGIN CERTIFICATE-----
+| MIID4zCCAsugAwIBAgIRAM2WYXSU0aNwndKTFSjtdPAwDQYJKoZIhvcNAQELBQAw
+| czELMAkGA1UEBhMCVVMxETAPBgNVBAgTCENvbG9yYWRvMQ8wDQYDVQQHEwZEZW52
+| ZXIxCTAHBgNVBAkTADENMAsGA1UEERMEMTgxNDESMBAGA1UEChMJREVCVUcgSU5D
+| MRIwEAYDVQQDEwkxMjcuMC4wLjEwHhcNMjUwNTI4MDMyMzU3WhcNMjgwNTI3MDMy
+| MzU3WjBzMQswCQYDVQQGEwJVUzERMA8GA1UECBMIQ29sb3JhZG8xDzANBgNVBAcT
+| BkRlbnZlcjEJMAcGA1UECRMAMQ0wCwYDVQQREwQxODE0MRIwEAYDVQQKEwlERUJV
+| RyBJTkMxEjAQBgNVBAMTCTEyNy4wLjAuMTCCASIwDQYJKoZIhvcNAQEBBQADggEP
+| ADCCAQoCggEBAJyIA3Lpt4co3l6cLYMbjxIp+x2s6mPpkkkLFvwe8o2yEl90GDHD
+| rt9g22Ny6J+fwl7coqikn9e0qs+El9AGgFQjtW8ttI5/NThO4xaBdlJzlcn7PsCj
+| SDnxhfAJ/9W0cGvUPZBeuHjc2iHZzjEuMGgu5yT8MlTWysYH+O7ZIU1P3rAhLKR5
+| RHp0eIEjHSdusZO9wSaHON7P2KGGaSOclzY0Vm2TZ0vltlmJzfQWbE9wRcxOiB7Y
+| qxiCP+09FGXsTF8iY+amcIoUlec/GnBGDAmEAUmcgo59cEyNjQsop/EqPwaSXmQd
+| JWr7NcpIwa4NILpYfUjR/EJDsO24EORQXfsCAwEAAaNyMHAwDgYDVR0PAQH/BAQD
+| AgKkMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAPBgNVHRMBAf8EBTAD
+| AQH/MB0GA1UdDgQWBBRHDR2oomhZpgrA9BITkWKag2aj9TAPBgNVHREECDAGhwR/
+| AAABMA0GCSqGSIb3DQEBCwUAA4IBAQCOVkPyBAP2fHAwNZy5r4l4ydSmIALaMNYY
+| ExHPrhwgqJvwo55ITnQiETVnx0uspGUDo4VH5HmP6xthPyY4F9eantaAIt4twPla
+| K5NBjrKZldnYLRRncyB6iuTpTz4fY7dHMXgM5RjHigwfnx2g7dVPn7uL4l1Qfn7K
+| hNuDPHYj0ayqgw6DLxDhzVEV6TKR6fojQvCcfI1y0AX2gtC6FdK6wlxjpzIIlCFQ
+| cOFZQSRySfySIK9mvfKIqRzVEoVuo/v/YDO/lYmDiDPoOzilI8PxlhQ0prv+A2WU
+| AkD7l8ZKnqxh5biFzRB5PUXg+j4LZERZBkgQKacgt9BDm32vnN7L
+|_-----END CERTIFICATE-----
+5000/tcp filtered upnp     port-unreach ttl 63
+8000/tcp open     http     syn-ack ttl 63      nginx 1.22.1
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-title: Index of /
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-server-header: nginx/1.22.1
+| http-ls: Volume /
+| SIZE  TIME               FILENAME
+| 1559  17-Dec-2024 12:31  disable_tls.patch
+| 875   17-Dec-2024 12:34  havoc.yaotl
+|_
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Jun 16 13:50:21 2025 -- 1 IP address (1 host up) scanned in 29.10 seconds
