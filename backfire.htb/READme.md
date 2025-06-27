@@ -1,7 +1,7 @@
 <p align="center"><img src="image/image.png" /></p>
 
 # Backfire Hackthebox
-## Nmap, 
+## Nmap, python, iptables
 ### Nmap
 ```
 sudo nmap -sCV -nP -vv -oA nmap/output backfire.htb
