@@ -1,0 +1,110 @@
+{
+  "Certificate Authorities": {
+    "0": {
+      "CA Name": "tombwatcher-CA-1",
+      "DNS Name": "DC01.tombwatcher.htb",
+      "Certificate Subject": "CN=tombwatcher-CA-1, DC=tombwatcher, DC=htb",
+      "Certificate Serial Number": "3428A7FC52C310B2460F8440AA8327AC",
+      "Certificate Validity Start": "2024-11-16 00:47:48+00:00",
+      "Certificate Validity End": "2123-11-16 00:57:48+00:00",
+      "Web Enrollment": {
+        "http": {
+          "enabled": false
+        },
+        "https": {
+          "enabled": false,
+          "channel_binding": null
+        }
+      },
+      "User Specified SAN": "Disabled",
+      "Request Disposition": "Issue",
+      "Enforce Encryption for Requests": "Enabled",
+      "Active Policy": "CertificateAuthority_MicrosoftDefault.Policy",
+      "Permissions": {
+        "Owner": "TOMBWATCHER.HTB\\Administrators",
+        "Access Rights": {
+          "1": [
+            "TOMBWATCHER.HTB\\Administrators",
+            "TOMBWATCHER.HTB\\Domain Admins",
+            "TOMBWATCHER.HTB\\Enterprise Admins"
+          ],
+          "2": [
+            "TOMBWATCHER.HTB\\Administrators",
+            "TOMBWATCHER.HTB\\Domain Admins",
+            "TOMBWATCHER.HTB\\Enterprise Admins"
+          ],
+          "512": [
+            "TOMBWATCHER.HTB\\Authenticated Users"
+          ]
+        }
+      }
+    }
+  },
+  "Certificate Templates": {
+    "0": {
+      "Template Name": "WebServer",
+      "Display Name": "Web Server",
+      "Certificate Authorities": [
+        "tombwatcher-CA-1"
+      ],
+      "Enabled": true,
+      "Client Authentication": false,
+      "Enrollment Agent": false,
+      "Any Purpose": false,
+      "Enrollee Supplies Subject": true,
+      "Certificate Name Flag": [
+        1
+      ],
+      "Extended Key Usage": [
+        "Server Authentication"
+      ],
+      "Requires Manager Approval": false,
+      "Requires Key Archival": false,
+      "Authorized Signatures Required": 0,
+      "Schema Version": 1,
+      "Validity Period": "2 years",
+      "Renewal Period": "6 weeks",
+      "Minimum RSA Key Length": 2048,
+      "Template Created": "2024-11-16 00:57:49+00:00",
+      "Template Last Modified": "2024-11-16 17:07:26+00:00",
+      "Permissions": {
+        "Enrollment Permissions": {
+          "Enrollment Rights": [
+            "TOMBWATCHER.HTB\\Domain Admins",
+            "TOMBWATCHER.HTB\\Enterprise Admins",
+            "TOMBWATCHER.HTB\\cert_admin"
+          ]
+        },
+        "Object Control Permissions": {
+          "Owner": "TOMBWATCHER.HTB\\Enterprise Admins",
+          "Full Control Principals": [
+            "TOMBWATCHER.HTB\\Domain Admins",
+            "TOMBWATCHER.HTB\\Enterprise Admins"
+          ],
+          "Write Owner Principals": [
+            "TOMBWATCHER.HTB\\Domain Admins",
+            "TOMBWATCHER.HTB\\Enterprise Admins"
+          ],
+          "Write Dacl Principals": [
+            "TOMBWATCHER.HTB\\Domain Admins",
+            "TOMBWATCHER.HTB\\Enterprise Admins"
+          ],
+          "Write Property Enroll": [
+            "TOMBWATCHER.HTB\\Domain Admins",
+            "TOMBWATCHER.HTB\\Enterprise Admins",
+            "TOMBWATCHER.HTB\\cert_admin"
+          ]
+        }
+      },
+      "[+] User Enrollable Principals": [
+        "TOMBWATCHER.HTB\\cert_admin"
+      ],
+      "[!] Vulnerabilities": {
+        "ESC15": "Enrollee supplies subject and schema version is 1."
+      },
+      "[*] Remarks": {
+        "ESC15": "Only applicable if the environment has not been patched. See CVE-2024-49019 or the wiki for more details."
+      }
+    }
+  }
+}

@@ -1,0 +1,235 @@
+# Nmap 7.95 scan initiated Tue Oct 14 09:08:11 2025 as: /usr/lib/nmap/nmap --privileged -sCV -vv -oA nmap/output 10.10.11.72
+Nmap scan report for DC01.tombwatcher.htb (10.10.11.72)
+Host is up, received echo-reply ttl 127 (0.35s latency).
+Scanned at 2025-10-14 09:08:12 +07 for 132s
+Not shown: 987 filtered tcp ports (no-response)
+PORT     STATE SERVICE       REASON          VERSION
+53/tcp   open  domain        syn-ack ttl 127 Simple DNS Plus
+80/tcp   open  http          syn-ack ttl 127 Microsoft IIS httpd 10.0
+|_http-title: IIS Windows Server
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+88/tcp   open  kerberos-sec  syn-ack ttl 127 Microsoft Windows Kerberos (server time: 2025-10-14 06:09:29Z)
+135/tcp  open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+139/tcp  open  netbios-ssn   syn-ack ttl 127 Microsoft Windows netbios-ssn
+389/tcp  open  ldap          syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: tombwatcher.htb0., Site: Default-First-Site-Name)
+|_ssl-date: 2025-10-14T06:11:03+00:00; +4h00m44s from scanner time.
+| ssl-cert: Subject: commonName=DC01.tombwatcher.htb
+| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1:<unsupported>, DNS:DC01.tombwatcher.htb
+| Issuer: commonName=tombwatcher-CA-1/domainComponent=tombwatcher
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2025-10-13T21:58:23
+| Not valid after:  2026-10-13T21:58:23
+| MD5:   2c3d:8517:46cc:d8ca:aed4:688d:c711:3411
+| SHA-1: 3ddb:dbd6:ee59:767f:5739:fff7:dc8a:385b:6bf5:3953
+| -----BEGIN CERTIFICATE-----
+| MIIGRzCCBS+gAwIBAgITLgAAAAOpW1IizrenhwAAAAAAAzANBgkqhkiG9w0BAQUF
+| ADBNMRMwEQYKCZImiZPyLGQBGRYDaHRiMRswGQYKCZImiZPyLGQBGRYLdG9tYndh
+| dGNoZXIxGTAXBgNVBAMTEHRvbWJ3YXRjaGVyLUNBLTEwHhcNMjUxMDEzMjE1ODIz
+| WhcNMjYxMDEzMjE1ODIzWjAfMR0wGwYDVQQDExREQzAxLnRvbWJ3YXRjaGVyLmh0
+| YjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK0XN2y3yeATHDqVPF2r
+| sYxy4c96HqowKXtQNGvM8izB3SfJTQbao1FHE3kKqNW6JbOawoHk9C6trGz2SZL9
+| Yz8bpHR8KNjH2EbSWgmX1SGhrdlsVhvk65cama/MKwXPsZuL0jliUqXj//xHFZ2B
+| 7lhaXwGvJIVZfyksMrE9L8xoH8IqTHwDW/Yo7CVxBN5Kvy3PJLUrf+6Qge1JDwDC
+| i4c2LRlP1rzyvewrIzJVuyX71dpJ0bTAdFDpvVsrHophiqV3LQnvXyIoDE6kGNSY
+| sVnocMVl0pbTebrBIULNPq6fqFBmeF4kerxr2i0MFiqTXZPAxtWaXsibO/qzQ2n5
+| I3ECAwEAAaOCA0wwggNIMC8GCSsGAQQBgjcUAgQiHiAARABvAG0AYQBpAG4AQwBv
+| AG4AdAByAG8AbABsAGUAcjAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEw
+| DgYDVR0PAQH/BAQDAgWgMHgGCSqGSIb3DQEJDwRrMGkwDgYIKoZIhvcNAwICAgCA
+| MA4GCCqGSIb3DQMEAgIAgDALBglghkgBZQMEASowCwYJYIZIAWUDBAEtMAsGCWCG
+| SAFlAwQBAjALBglghkgBZQMEAQUwBwYFKw4DAgcwCgYIKoZIhvcNAwcwQAYDVR0R
+| BDkwN6AfBgkrBgEEAYI3GQGgEgQQ/LLux6UybE+7auQGc3NOYYIUREMwMS50b21i
+| d2F0Y2hlci5odGIwHQYDVR0OBBYEFHbipL8pyb6U61+1bJ5BiO/7DmudMB8GA1Ud
+| IwQYMBaAFCrN5HoYF07vh90LHVZ5CkBQxvI6MIHPBgNVHR8EgccwgcQwgcGggb6g
+| gbuGgbhsZGFwOi8vL0NOPXRvbWJ3YXRjaGVyLUNBLTEsQ049REMwMSxDTj1DRFAs
+| Q049UHVibGljJTIwS2V5JTIwU2VydmljZXMsQ049U2VydmljZXMsQ049Q29uZmln
+| dXJhdGlvbixEQz10b21id2F0Y2hlcixEQz1odGI/Y2VydGlmaWNhdGVSZXZvY2F0
+| aW9uTGlzdD9iYXNlP29iamVjdENsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MIHG
+| BggrBgEFBQcBAQSBuTCBtjCBswYIKwYBBQUHMAKGgaZsZGFwOi8vL0NOPXRvbWJ3
+| YXRjaGVyLUNBLTEsQ049QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENO
+| PVNlcnZpY2VzLENOPUNvbmZpZ3VyYXRpb24sREM9dG9tYndhdGNoZXIsREM9aHRi
+| P2NBQ2VydGlmaWNhdGU/YmFzZT9vYmplY3RDbGFzcz1jZXJ0aWZpY2F0aW9uQXV0
+| aG9yaXR5ME8GCSsGAQQBgjcZAgRCMECgPgYKKwYBBAGCNxkCAaAwBC5TLTEtNS0y
+| MS0xMzkyNDkxMDEwLTEzNTg2Mzg3MjEtMjEyNjk4MjU4Ny0xMDAwMA0GCSqGSIb3
+| DQEBBQUAA4IBAQBSyPEoF4oWrYnybNRyRD5ef92eVBiDeLesyo018KGo//fBowg/
+| nOFRXVpNkw3q0uj2E50H4N7Mc5I/n+7O0Vbq9xjfvVh1YVWYHNk/VCgsVtFrACr4
+| loyF94ZBkhGDONZSrCZADzHJqmzw/gOEqIjaAZ7vJnDqnpuUb+zLwC29tLM8axnn
+| zBHR9ITnHBdpQLXJm+wtXzruaAe83zJGjiTf9eW3YozImhs4eQDOF2Zdx19vk5mk
+| 6QOEDUzIj4zBr7oNQ3Us506TtR+k6HHLJoeo1GXq8ZD8r66f14gkXlzSJEaeFjCj
+| gsd/pe0bAbXL1bus4fiep1qHV4Kd1KxBghIm
+|_-----END CERTIFICATE-----
+445/tcp  open  microsoft-ds? syn-ack ttl 127
+464/tcp  open  kpasswd5?     syn-ack ttl 127
+593/tcp  open  ncacn_http    syn-ack ttl 127 Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  ssl/ldap      syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: tombwatcher.htb0., Site: Default-First-Site-Name)
+|_ssl-date: 2025-10-14T06:11:02+00:00; +4h00m44s from scanner time.
+| ssl-cert: Subject: commonName=DC01.tombwatcher.htb
+| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1:<unsupported>, DNS:DC01.tombwatcher.htb
+| Issuer: commonName=tombwatcher-CA-1/domainComponent=tombwatcher
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2025-10-13T21:58:23
+| Not valid after:  2026-10-13T21:58:23
+| MD5:   2c3d:8517:46cc:d8ca:aed4:688d:c711:3411
+| SHA-1: 3ddb:dbd6:ee59:767f:5739:fff7:dc8a:385b:6bf5:3953
+| -----BEGIN CERTIFICATE-----
+| MIIGRzCCBS+gAwIBAgITLgAAAAOpW1IizrenhwAAAAAAAzANBgkqhkiG9w0BAQUF
+| ADBNMRMwEQYKCZImiZPyLGQBGRYDaHRiMRswGQYKCZImiZPyLGQBGRYLdG9tYndh
+| dGNoZXIxGTAXBgNVBAMTEHRvbWJ3YXRjaGVyLUNBLTEwHhcNMjUxMDEzMjE1ODIz
+| WhcNMjYxMDEzMjE1ODIzWjAfMR0wGwYDVQQDExREQzAxLnRvbWJ3YXRjaGVyLmh0
+| YjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK0XN2y3yeATHDqVPF2r
+| sYxy4c96HqowKXtQNGvM8izB3SfJTQbao1FHE3kKqNW6JbOawoHk9C6trGz2SZL9
+| Yz8bpHR8KNjH2EbSWgmX1SGhrdlsVhvk65cama/MKwXPsZuL0jliUqXj//xHFZ2B
+| 7lhaXwGvJIVZfyksMrE9L8xoH8IqTHwDW/Yo7CVxBN5Kvy3PJLUrf+6Qge1JDwDC
+| i4c2LRlP1rzyvewrIzJVuyX71dpJ0bTAdFDpvVsrHophiqV3LQnvXyIoDE6kGNSY
+| sVnocMVl0pbTebrBIULNPq6fqFBmeF4kerxr2i0MFiqTXZPAxtWaXsibO/qzQ2n5
+| I3ECAwEAAaOCA0wwggNIMC8GCSsGAQQBgjcUAgQiHiAARABvAG0AYQBpAG4AQwBv
+| AG4AdAByAG8AbABsAGUAcjAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEw
+| DgYDVR0PAQH/BAQDAgWgMHgGCSqGSIb3DQEJDwRrMGkwDgYIKoZIhvcNAwICAgCA
+| MA4GCCqGSIb3DQMEAgIAgDALBglghkgBZQMEASowCwYJYIZIAWUDBAEtMAsGCWCG
+| SAFlAwQBAjALBglghkgBZQMEAQUwBwYFKw4DAgcwCgYIKoZIhvcNAwcwQAYDVR0R
+| BDkwN6AfBgkrBgEEAYI3GQGgEgQQ/LLux6UybE+7auQGc3NOYYIUREMwMS50b21i
+| d2F0Y2hlci5odGIwHQYDVR0OBBYEFHbipL8pyb6U61+1bJ5BiO/7DmudMB8GA1Ud
+| IwQYMBaAFCrN5HoYF07vh90LHVZ5CkBQxvI6MIHPBgNVHR8EgccwgcQwgcGggb6g
+| gbuGgbhsZGFwOi8vL0NOPXRvbWJ3YXRjaGVyLUNBLTEsQ049REMwMSxDTj1DRFAs
+| Q049UHVibGljJTIwS2V5JTIwU2VydmljZXMsQ049U2VydmljZXMsQ049Q29uZmln
+| dXJhdGlvbixEQz10b21id2F0Y2hlcixEQz1odGI/Y2VydGlmaWNhdGVSZXZvY2F0
+| aW9uTGlzdD9iYXNlP29iamVjdENsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MIHG
+| BggrBgEFBQcBAQSBuTCBtjCBswYIKwYBBQUHMAKGgaZsZGFwOi8vL0NOPXRvbWJ3
+| YXRjaGVyLUNBLTEsQ049QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENO
+| PVNlcnZpY2VzLENOPUNvbmZpZ3VyYXRpb24sREM9dG9tYndhdGNoZXIsREM9aHRi
+| P2NBQ2VydGlmaWNhdGU/YmFzZT9vYmplY3RDbGFzcz1jZXJ0aWZpY2F0aW9uQXV0
+| aG9yaXR5ME8GCSsGAQQBgjcZAgRCMECgPgYKKwYBBAGCNxkCAaAwBC5TLTEtNS0y
+| MS0xMzkyNDkxMDEwLTEzNTg2Mzg3MjEtMjEyNjk4MjU4Ny0xMDAwMA0GCSqGSIb3
+| DQEBBQUAA4IBAQBSyPEoF4oWrYnybNRyRD5ef92eVBiDeLesyo018KGo//fBowg/
+| nOFRXVpNkw3q0uj2E50H4N7Mc5I/n+7O0Vbq9xjfvVh1YVWYHNk/VCgsVtFrACr4
+| loyF94ZBkhGDONZSrCZADzHJqmzw/gOEqIjaAZ7vJnDqnpuUb+zLwC29tLM8axnn
+| zBHR9ITnHBdpQLXJm+wtXzruaAe83zJGjiTf9eW3YozImhs4eQDOF2Zdx19vk5mk
+| 6QOEDUzIj4zBr7oNQ3Us506TtR+k6HHLJoeo1GXq8ZD8r66f14gkXlzSJEaeFjCj
+| gsd/pe0bAbXL1bus4fiep1qHV4Kd1KxBghIm
+|_-----END CERTIFICATE-----
+3268/tcp open  ldap          syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: tombwatcher.htb0., Site: Default-First-Site-Name)
+|_ssl-date: 2025-10-14T06:11:04+00:00; +4h00m45s from scanner time.
+| ssl-cert: Subject: commonName=DC01.tombwatcher.htb
+| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1:<unsupported>, DNS:DC01.tombwatcher.htb
+| Issuer: commonName=tombwatcher-CA-1/domainComponent=tombwatcher
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2025-10-13T21:58:23
+| Not valid after:  2026-10-13T21:58:23
+| MD5:   2c3d:8517:46cc:d8ca:aed4:688d:c711:3411
+| SHA-1: 3ddb:dbd6:ee59:767f:5739:fff7:dc8a:385b:6bf5:3953
+| -----BEGIN CERTIFICATE-----
+| MIIGRzCCBS+gAwIBAgITLgAAAAOpW1IizrenhwAAAAAAAzANBgkqhkiG9w0BAQUF
+| ADBNMRMwEQYKCZImiZPyLGQBGRYDaHRiMRswGQYKCZImiZPyLGQBGRYLdG9tYndh
+| dGNoZXIxGTAXBgNVBAMTEHRvbWJ3YXRjaGVyLUNBLTEwHhcNMjUxMDEzMjE1ODIz
+| WhcNMjYxMDEzMjE1ODIzWjAfMR0wGwYDVQQDExREQzAxLnRvbWJ3YXRjaGVyLmh0
+| YjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK0XN2y3yeATHDqVPF2r
+| sYxy4c96HqowKXtQNGvM8izB3SfJTQbao1FHE3kKqNW6JbOawoHk9C6trGz2SZL9
+| Yz8bpHR8KNjH2EbSWgmX1SGhrdlsVhvk65cama/MKwXPsZuL0jliUqXj//xHFZ2B
+| 7lhaXwGvJIVZfyksMrE9L8xoH8IqTHwDW/Yo7CVxBN5Kvy3PJLUrf+6Qge1JDwDC
+| i4c2LRlP1rzyvewrIzJVuyX71dpJ0bTAdFDpvVsrHophiqV3LQnvXyIoDE6kGNSY
+| sVnocMVl0pbTebrBIULNPq6fqFBmeF4kerxr2i0MFiqTXZPAxtWaXsibO/qzQ2n5
+| I3ECAwEAAaOCA0wwggNIMC8GCSsGAQQBgjcUAgQiHiAARABvAG0AYQBpAG4AQwBv
+| AG4AdAByAG8AbABsAGUAcjAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEw
+| DgYDVR0PAQH/BAQDAgWgMHgGCSqGSIb3DQEJDwRrMGkwDgYIKoZIhvcNAwICAgCA
+| MA4GCCqGSIb3DQMEAgIAgDALBglghkgBZQMEASowCwYJYIZIAWUDBAEtMAsGCWCG
+| SAFlAwQBAjALBglghkgBZQMEAQUwBwYFKw4DAgcwCgYIKoZIhvcNAwcwQAYDVR0R
+| BDkwN6AfBgkrBgEEAYI3GQGgEgQQ/LLux6UybE+7auQGc3NOYYIUREMwMS50b21i
+| d2F0Y2hlci5odGIwHQYDVR0OBBYEFHbipL8pyb6U61+1bJ5BiO/7DmudMB8GA1Ud
+| IwQYMBaAFCrN5HoYF07vh90LHVZ5CkBQxvI6MIHPBgNVHR8EgccwgcQwgcGggb6g
+| gbuGgbhsZGFwOi8vL0NOPXRvbWJ3YXRjaGVyLUNBLTEsQ049REMwMSxDTj1DRFAs
+| Q049UHVibGljJTIwS2V5JTIwU2VydmljZXMsQ049U2VydmljZXMsQ049Q29uZmln
+| dXJhdGlvbixEQz10b21id2F0Y2hlcixEQz1odGI/Y2VydGlmaWNhdGVSZXZvY2F0
+| aW9uTGlzdD9iYXNlP29iamVjdENsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MIHG
+| BggrBgEFBQcBAQSBuTCBtjCBswYIKwYBBQUHMAKGgaZsZGFwOi8vL0NOPXRvbWJ3
+| YXRjaGVyLUNBLTEsQ049QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENO
+| PVNlcnZpY2VzLENOPUNvbmZpZ3VyYXRpb24sREM9dG9tYndhdGNoZXIsREM9aHRi
+| P2NBQ2VydGlmaWNhdGU/YmFzZT9vYmplY3RDbGFzcz1jZXJ0aWZpY2F0aW9uQXV0
+| aG9yaXR5ME8GCSsGAQQBgjcZAgRCMECgPgYKKwYBBAGCNxkCAaAwBC5TLTEtNS0y
+| MS0xMzkyNDkxMDEwLTEzNTg2Mzg3MjEtMjEyNjk4MjU4Ny0xMDAwMA0GCSqGSIb3
+| DQEBBQUAA4IBAQBSyPEoF4oWrYnybNRyRD5ef92eVBiDeLesyo018KGo//fBowg/
+| nOFRXVpNkw3q0uj2E50H4N7Mc5I/n+7O0Vbq9xjfvVh1YVWYHNk/VCgsVtFrACr4
+| loyF94ZBkhGDONZSrCZADzHJqmzw/gOEqIjaAZ7vJnDqnpuUb+zLwC29tLM8axnn
+| zBHR9ITnHBdpQLXJm+wtXzruaAe83zJGjiTf9eW3YozImhs4eQDOF2Zdx19vk5mk
+| 6QOEDUzIj4zBr7oNQ3Us506TtR+k6HHLJoeo1GXq8ZD8r66f14gkXlzSJEaeFjCj
+| gsd/pe0bAbXL1bus4fiep1qHV4Kd1KxBghIm
+|_-----END CERTIFICATE-----
+3269/tcp open  ssl/ldap      syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: tombwatcher.htb0., Site: Default-First-Site-Name)
+|_ssl-date: 2025-10-14T06:11:03+00:00; +4h00m45s from scanner time.
+| ssl-cert: Subject: commonName=DC01.tombwatcher.htb
+| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1:<unsupported>, DNS:DC01.tombwatcher.htb
+| Issuer: commonName=tombwatcher-CA-1/domainComponent=tombwatcher
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2025-10-13T21:58:23
+| Not valid after:  2026-10-13T21:58:23
+| MD5:   2c3d:8517:46cc:d8ca:aed4:688d:c711:3411
+| SHA-1: 3ddb:dbd6:ee59:767f:5739:fff7:dc8a:385b:6bf5:3953
+| -----BEGIN CERTIFICATE-----
+| MIIGRzCCBS+gAwIBAgITLgAAAAOpW1IizrenhwAAAAAAAzANBgkqhkiG9w0BAQUF
+| ADBNMRMwEQYKCZImiZPyLGQBGRYDaHRiMRswGQYKCZImiZPyLGQBGRYLdG9tYndh
+| dGNoZXIxGTAXBgNVBAMTEHRvbWJ3YXRjaGVyLUNBLTEwHhcNMjUxMDEzMjE1ODIz
+| WhcNMjYxMDEzMjE1ODIzWjAfMR0wGwYDVQQDExREQzAxLnRvbWJ3YXRjaGVyLmh0
+| YjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK0XN2y3yeATHDqVPF2r
+| sYxy4c96HqowKXtQNGvM8izB3SfJTQbao1FHE3kKqNW6JbOawoHk9C6trGz2SZL9
+| Yz8bpHR8KNjH2EbSWgmX1SGhrdlsVhvk65cama/MKwXPsZuL0jliUqXj//xHFZ2B
+| 7lhaXwGvJIVZfyksMrE9L8xoH8IqTHwDW/Yo7CVxBN5Kvy3PJLUrf+6Qge1JDwDC
+| i4c2LRlP1rzyvewrIzJVuyX71dpJ0bTAdFDpvVsrHophiqV3LQnvXyIoDE6kGNSY
+| sVnocMVl0pbTebrBIULNPq6fqFBmeF4kerxr2i0MFiqTXZPAxtWaXsibO/qzQ2n5
+| I3ECAwEAAaOCA0wwggNIMC8GCSsGAQQBgjcUAgQiHiAARABvAG0AYQBpAG4AQwBv
+| AG4AdAByAG8AbABsAGUAcjAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEw
+| DgYDVR0PAQH/BAQDAgWgMHgGCSqGSIb3DQEJDwRrMGkwDgYIKoZIhvcNAwICAgCA
+| MA4GCCqGSIb3DQMEAgIAgDALBglghkgBZQMEASowCwYJYIZIAWUDBAEtMAsGCWCG
+| SAFlAwQBAjALBglghkgBZQMEAQUwBwYFKw4DAgcwCgYIKoZIhvcNAwcwQAYDVR0R
+| BDkwN6AfBgkrBgEEAYI3GQGgEgQQ/LLux6UybE+7auQGc3NOYYIUREMwMS50b21i
+| d2F0Y2hlci5odGIwHQYDVR0OBBYEFHbipL8pyb6U61+1bJ5BiO/7DmudMB8GA1Ud
+| IwQYMBaAFCrN5HoYF07vh90LHVZ5CkBQxvI6MIHPBgNVHR8EgccwgcQwgcGggb6g
+| gbuGgbhsZGFwOi8vL0NOPXRvbWJ3YXRjaGVyLUNBLTEsQ049REMwMSxDTj1DRFAs
+| Q049UHVibGljJTIwS2V5JTIwU2VydmljZXMsQ049U2VydmljZXMsQ049Q29uZmln
+| dXJhdGlvbixEQz10b21id2F0Y2hlcixEQz1odGI/Y2VydGlmaWNhdGVSZXZvY2F0
+| aW9uTGlzdD9iYXNlP29iamVjdENsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MIHG
+| BggrBgEFBQcBAQSBuTCBtjCBswYIKwYBBQUHMAKGgaZsZGFwOi8vL0NOPXRvbWJ3
+| YXRjaGVyLUNBLTEsQ049QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENO
+| PVNlcnZpY2VzLENOPUNvbmZpZ3VyYXRpb24sREM9dG9tYndhdGNoZXIsREM9aHRi
+| P2NBQ2VydGlmaWNhdGU/YmFzZT9vYmplY3RDbGFzcz1jZXJ0aWZpY2F0aW9uQXV0
+| aG9yaXR5ME8GCSsGAQQBgjcZAgRCMECgPgYKKwYBBAGCNxkCAaAwBC5TLTEtNS0y
+| MS0xMzkyNDkxMDEwLTEzNTg2Mzg3MjEtMjEyNjk4MjU4Ny0xMDAwMA0GCSqGSIb3
+| DQEBBQUAA4IBAQBSyPEoF4oWrYnybNRyRD5ef92eVBiDeLesyo018KGo//fBowg/
+| nOFRXVpNkw3q0uj2E50H4N7Mc5I/n+7O0Vbq9xjfvVh1YVWYHNk/VCgsVtFrACr4
+| loyF94ZBkhGDONZSrCZADzHJqmzw/gOEqIjaAZ7vJnDqnpuUb+zLwC29tLM8axnn
+| zBHR9ITnHBdpQLXJm+wtXzruaAe83zJGjiTf9eW3YozImhs4eQDOF2Zdx19vk5mk
+| 6QOEDUzIj4zBr7oNQ3Us506TtR+k6HHLJoeo1GXq8ZD8r66f14gkXlzSJEaeFjCj
+| gsd/pe0bAbXL1bus4fiep1qHV4Kd1KxBghIm
+|_-----END CERTIFICATE-----
+5985/tcp open  http          syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+|_http-server-header: Microsoft-HTTPAPI/2.0
+Service Info: Host: DC01; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 20899/tcp): CLEAN (Timeout)
+|   Check 2 (port 21766/tcp): CLEAN (Timeout)
+|   Check 3 (port 61752/udp): CLEAN (Timeout)
+|   Check 4 (port 14311/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2025-10-14T06:10:23
+|_  start_date: N/A
+|_clock-skew: mean: 4h00m44s, deviation: 0s, median: 4h00m44s
+
+Read data files from: /usr/share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Oct 14 09:10:24 2025 -- 1 IP address (1 host up) scanned in 133.25 seconds

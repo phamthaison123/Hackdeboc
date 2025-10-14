@@ -1,0 +1,234 @@
+# Nmap 7.95 scan initiated Wed Oct  8 09:16:32 2025 as: /usr/lib/nmap/nmap -sCV -vv -oA nmap/certificate 10.10.11.71
+Nmap scan report for 10.10.11.71
+Host is up, received echo-reply ttl 127 (3.1s latency).
+Scanned at 2025-10-08 09:16:35 +07 for 477s
+Not shown: 987 filtered tcp ports (no-response)
+PORT     STATE SERVICE           REASON          VERSION
+53/tcp   open  domain            syn-ack ttl 127 Simple DNS Plus
+80/tcp   open  http              syn-ack ttl 127 Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30
+|_http-title: Did not follow redirect to http://certificate.htb/
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30
+88/tcp   open  kerberos-sec?     syn-ack ttl 127
+135/tcp  open  msrpc?            syn-ack ttl 127
+139/tcp  open  netbios-ssn       syn-ack ttl 127 Microsoft Windows netbios-ssn
+389/tcp  open  ldap              syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: certificate.htb0., Site: Default-First-Site-Name)
+| ssl-cert: Subject: commonName=DC01.certificate.htb
+| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1:<unsupported>, DNS:DC01.certificate.htb
+| Issuer: commonName=Certificate-LTD-CA/domainComponent=certificate
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2025-10-08T03:05:35
+| Not valid after:  2026-10-08T03:05:35
+| MD5:   5dbf:3452:0015:8f59:0306:97f0:c246:e3ba
+| SHA-1: 430c:2e23:2388:a6f6:e43b:b5ce:a586:8c98:af33:eff2
+| -----BEGIN CERTIFICATE-----
+| MIIGTDCCBTSgAwIBAgITWAAAABXfYBbZPXmbcwAAAAAAFTANBgkqhkiG9w0BAQsF
+| ADBPMRMwEQYKCZImiZPyLGQBGRYDaHRiMRswGQYKCZImiZPyLGQBGRYLY2VydGlm
+| aWNhdGUxGzAZBgNVBAMTEkNlcnRpZmljYXRlLUxURC1DQTAeFw0yNTEwMDgwMzA1
+| MzVaFw0yNjEwMDgwMzA1MzVaMB8xHTAbBgNVBAMTFERDMDEuY2VydGlmaWNhdGUu
+| aHRiMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0AP8+AhT/Eguz9W6
+| YQT5UJI27JvfoHVAJo43YLyYCxfrldol+5JgtPDAYvafe/hFy2rfhGRbPeffGoVF
+| Bqq1hhO7+b4nfPEWw7jN/gGPHxdHq1P1ejeqrv9Gl/6jE60df4RI1imN9oCtFIoS
+| fYWNHZkVoSMn6DUsDBHZ5oPaPRInRRvhKonqCaShsHJIGbGjMypzvxmsoDcYrdZe
+| wAkWVTbKeMPx/CROAh1LrsObh+UtHySx+2NCgXR+2H5NkK3T7Rl3EAi1majdL0AG
+| ZZdyiKPhOJmYvAXaM2rg+19V1nNC+A+NfJ8OD0Xr2wwczQ75U+jqZgF/GZA8gFVW
+| t0ttsQIDAQABo4IDTzCCA0swLwYJKwYBBAGCNxQCBCIeIABEAG8AbQBhAGkAbgBD
+| AG8AbgB0AHIAbwBsAGwAZQByMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcD
+| ATAOBgNVHQ8BAf8EBAMCBaAweAYJKoZIhvcNAQkPBGswaTAOBggqhkiG9w0DAgIC
+| AIAwDgYIKoZIhvcNAwQCAgCAMAsGCWCGSAFlAwQBKjALBglghkgBZQMEAS0wCwYJ
+| YIZIAWUDBAECMAsGCWCGSAFlAwQBBTAHBgUrDgMCBzAKBggqhkiG9w0DBzAdBgNV
+| HQ4EFgQUtQq8owzoDHJyyPWxhtnvNR2wM8IwHwYDVR0jBBgwFoAUOuH3UW3vrUoY
+| d0Gju7uF5m6Uc6IwgdEGA1UdHwSByTCBxjCBw6CBwKCBvYaBumxkYXA6Ly8vQ049
+| Q2VydGlmaWNhdGUtTFRELUNBLENOPURDMDEsQ049Q0RQLENOPVB1YmxpYyUyMEtl
+| eSUyMFNlcnZpY2VzLENOPVNlcnZpY2VzLENOPUNvbmZpZ3VyYXRpb24sREM9Y2Vy
+| dGlmaWNhdGUsREM9aHRiP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3Q/YmFzZT9v
+| YmplY3RDbGFzcz1jUkxEaXN0cmlidXRpb25Qb2ludDCByAYIKwYBBQUHAQEEgbsw
+| gbgwgbUGCCsGAQUFBzAChoGobGRhcDovLy9DTj1DZXJ0aWZpY2F0ZS1MVEQtQ0Es
+| Q049QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENOPVNlcnZpY2VzLENO
+| PUNvbmZpZ3VyYXRpb24sREM9Y2VydGlmaWNhdGUsREM9aHRiP2NBQ2VydGlmaWNh
+| dGU/YmFzZT9vYmplY3RDbGFzcz1jZXJ0aWZpY2F0aW9uQXV0aG9yaXR5MEAGA1Ud
+| EQQ5MDegHwYJKwYBBAGCNxkBoBIEEAdHN3ziVeJEnb0gcZhtQbWCFERDMDEuY2Vy
+| dGlmaWNhdGUuaHRiME4GCSsGAQQBgjcZAgRBMD+gPQYKKwYBBAGCNxkCAaAvBC1T
+| LTEtNS0yMS01MTU1Mzc2NjktNDIyMzY4NzE5Ni0zMjQ5NjkwNTgzLTEwMDAwDQYJ
+| KoZIhvcNAQELBQADggEBADf9n+npBVXr2Bxh9nOPq1POiKxl/Cn9Em6npJ9VQnfa
+| AeK01U/R/3vyx3h7wug2EOvJsboFSeBs+krqn8bWnfsjsfSD/AMjwwdxyLovWCYY
+| fXPm7kVnx0K3mzfSNWLM1JoMps9M0QztQuAF/d6oOIf6pYFugM2ceGHQ8V8wf8Z6
+| Ptx+HcwQM9m6RWu7adSRROl28uQO/vUEMvuEGrHN/xow6hcIpAKjrnzh2gKRp5Ye
+| q9FTqjjbbCKxpQ7y8+FMzmPDaeiSYXyDWcLnmC/rE8ClIjmZsOTuyITwEd6X9Jyw
+| D8Y7tXt0anuNiUVYBt2MpJMrCvNRWZxpckXZSAxJDlw=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2025-10-08T10:23:53+00:00; +7h59m57s from scanner time.
+445/tcp  open  microsoft-ds?     syn-ack ttl 127
+464/tcp  open  kpasswd5?         syn-ack ttl 127
+593/tcp  open  ncacn_http        syn-ack ttl 127 Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  ldapssl?          syn-ack ttl 127
+|_ssl-date: 2025-10-08T10:23:45+00:00; +8h00m00s from scanner time.
+| ssl-cert: Subject: commonName=DC01.certificate.htb
+| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1:<unsupported>, DNS:DC01.certificate.htb
+| Issuer: commonName=Certificate-LTD-CA/domainComponent=certificate
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2025-10-08T03:05:35
+| Not valid after:  2026-10-08T03:05:35
+| MD5:   5dbf:3452:0015:8f59:0306:97f0:c246:e3ba
+| SHA-1: 430c:2e23:2388:a6f6:e43b:b5ce:a586:8c98:af33:eff2
+| -----BEGIN CERTIFICATE-----
+| MIIGTDCCBTSgAwIBAgITWAAAABXfYBbZPXmbcwAAAAAAFTANBgkqhkiG9w0BAQsF
+| ADBPMRMwEQYKCZImiZPyLGQBGRYDaHRiMRswGQYKCZImiZPyLGQBGRYLY2VydGlm
+| aWNhdGUxGzAZBgNVBAMTEkNlcnRpZmljYXRlLUxURC1DQTAeFw0yNTEwMDgwMzA1
+| MzVaFw0yNjEwMDgwMzA1MzVaMB8xHTAbBgNVBAMTFERDMDEuY2VydGlmaWNhdGUu
+| aHRiMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0AP8+AhT/Eguz9W6
+| YQT5UJI27JvfoHVAJo43YLyYCxfrldol+5JgtPDAYvafe/hFy2rfhGRbPeffGoVF
+| Bqq1hhO7+b4nfPEWw7jN/gGPHxdHq1P1ejeqrv9Gl/6jE60df4RI1imN9oCtFIoS
+| fYWNHZkVoSMn6DUsDBHZ5oPaPRInRRvhKonqCaShsHJIGbGjMypzvxmsoDcYrdZe
+| wAkWVTbKeMPx/CROAh1LrsObh+UtHySx+2NCgXR+2H5NkK3T7Rl3EAi1majdL0AG
+| ZZdyiKPhOJmYvAXaM2rg+19V1nNC+A+NfJ8OD0Xr2wwczQ75U+jqZgF/GZA8gFVW
+| t0ttsQIDAQABo4IDTzCCA0swLwYJKwYBBAGCNxQCBCIeIABEAG8AbQBhAGkAbgBD
+| AG8AbgB0AHIAbwBsAGwAZQByMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcD
+| ATAOBgNVHQ8BAf8EBAMCBaAweAYJKoZIhvcNAQkPBGswaTAOBggqhkiG9w0DAgIC
+| AIAwDgYIKoZIhvcNAwQCAgCAMAsGCWCGSAFlAwQBKjALBglghkgBZQMEAS0wCwYJ
+| YIZIAWUDBAECMAsGCWCGSAFlAwQBBTAHBgUrDgMCBzAKBggqhkiG9w0DBzAdBgNV
+| HQ4EFgQUtQq8owzoDHJyyPWxhtnvNR2wM8IwHwYDVR0jBBgwFoAUOuH3UW3vrUoY
+| d0Gju7uF5m6Uc6IwgdEGA1UdHwSByTCBxjCBw6CBwKCBvYaBumxkYXA6Ly8vQ049
+| Q2VydGlmaWNhdGUtTFRELUNBLENOPURDMDEsQ049Q0RQLENOPVB1YmxpYyUyMEtl
+| eSUyMFNlcnZpY2VzLENOPVNlcnZpY2VzLENOPUNvbmZpZ3VyYXRpb24sREM9Y2Vy
+| dGlmaWNhdGUsREM9aHRiP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3Q/YmFzZT9v
+| YmplY3RDbGFzcz1jUkxEaXN0cmlidXRpb25Qb2ludDCByAYIKwYBBQUHAQEEgbsw
+| gbgwgbUGCCsGAQUFBzAChoGobGRhcDovLy9DTj1DZXJ0aWZpY2F0ZS1MVEQtQ0Es
+| Q049QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENOPVNlcnZpY2VzLENO
+| PUNvbmZpZ3VyYXRpb24sREM9Y2VydGlmaWNhdGUsREM9aHRiP2NBQ2VydGlmaWNh
+| dGU/YmFzZT9vYmplY3RDbGFzcz1jZXJ0aWZpY2F0aW9uQXV0aG9yaXR5MEAGA1Ud
+| EQQ5MDegHwYJKwYBBAGCNxkBoBIEEAdHN3ziVeJEnb0gcZhtQbWCFERDMDEuY2Vy
+| dGlmaWNhdGUuaHRiME4GCSsGAQQBgjcZAgRBMD+gPQYKKwYBBAGCNxkCAaAvBC1T
+| LTEtNS0yMS01MTU1Mzc2NjktNDIyMzY4NzE5Ni0zMjQ5NjkwNTgzLTEwMDAwDQYJ
+| KoZIhvcNAQELBQADggEBADf9n+npBVXr2Bxh9nOPq1POiKxl/Cn9Em6npJ9VQnfa
+| AeK01U/R/3vyx3h7wug2EOvJsboFSeBs+krqn8bWnfsjsfSD/AMjwwdxyLovWCYY
+| fXPm7kVnx0K3mzfSNWLM1JoMps9M0QztQuAF/d6oOIf6pYFugM2ceGHQ8V8wf8Z6
+| Ptx+HcwQM9m6RWu7adSRROl28uQO/vUEMvuEGrHN/xow6hcIpAKjrnzh2gKRp5Ye
+| q9FTqjjbbCKxpQ7y8+FMzmPDaeiSYXyDWcLnmC/rE8ClIjmZsOTuyITwEd6X9Jyw
+| D8Y7tXt0anuNiUVYBt2MpJMrCvNRWZxpckXZSAxJDlw=
+|_-----END CERTIFICATE-----
+3268/tcp open  ldap              syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: certificate.htb0., Site: Default-First-Site-Name)
+|_ssl-date: 2025-10-08T10:24:04+00:00; +7h59m58s from scanner time.
+| ssl-cert: Subject: commonName=DC01.certificate.htb
+| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1:<unsupported>, DNS:DC01.certificate.htb
+| Issuer: commonName=Certificate-LTD-CA/domainComponent=certificate
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2025-10-08T03:05:35
+| Not valid after:  2026-10-08T03:05:35
+| MD5:   5dbf:3452:0015:8f59:0306:97f0:c246:e3ba
+| SHA-1: 430c:2e23:2388:a6f6:e43b:b5ce:a586:8c98:af33:eff2
+| -----BEGIN CERTIFICATE-----
+| MIIGTDCCBTSgAwIBAgITWAAAABXfYBbZPXmbcwAAAAAAFTANBgkqhkiG9w0BAQsF
+| ADBPMRMwEQYKCZImiZPyLGQBGRYDaHRiMRswGQYKCZImiZPyLGQBGRYLY2VydGlm
+| aWNhdGUxGzAZBgNVBAMTEkNlcnRpZmljYXRlLUxURC1DQTAeFw0yNTEwMDgwMzA1
+| MzVaFw0yNjEwMDgwMzA1MzVaMB8xHTAbBgNVBAMTFERDMDEuY2VydGlmaWNhdGUu
+| aHRiMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0AP8+AhT/Eguz9W6
+| YQT5UJI27JvfoHVAJo43YLyYCxfrldol+5JgtPDAYvafe/hFy2rfhGRbPeffGoVF
+| Bqq1hhO7+b4nfPEWw7jN/gGPHxdHq1P1ejeqrv9Gl/6jE60df4RI1imN9oCtFIoS
+| fYWNHZkVoSMn6DUsDBHZ5oPaPRInRRvhKonqCaShsHJIGbGjMypzvxmsoDcYrdZe
+| wAkWVTbKeMPx/CROAh1LrsObh+UtHySx+2NCgXR+2H5NkK3T7Rl3EAi1majdL0AG
+| ZZdyiKPhOJmYvAXaM2rg+19V1nNC+A+NfJ8OD0Xr2wwczQ75U+jqZgF/GZA8gFVW
+| t0ttsQIDAQABo4IDTzCCA0swLwYJKwYBBAGCNxQCBCIeIABEAG8AbQBhAGkAbgBD
+| AG8AbgB0AHIAbwBsAGwAZQByMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcD
+| ATAOBgNVHQ8BAf8EBAMCBaAweAYJKoZIhvcNAQkPBGswaTAOBggqhkiG9w0DAgIC
+| AIAwDgYIKoZIhvcNAwQCAgCAMAsGCWCGSAFlAwQBKjALBglghkgBZQMEAS0wCwYJ
+| YIZIAWUDBAECMAsGCWCGSAFlAwQBBTAHBgUrDgMCBzAKBggqhkiG9w0DBzAdBgNV
+| HQ4EFgQUtQq8owzoDHJyyPWxhtnvNR2wM8IwHwYDVR0jBBgwFoAUOuH3UW3vrUoY
+| d0Gju7uF5m6Uc6IwgdEGA1UdHwSByTCBxjCBw6CBwKCBvYaBumxkYXA6Ly8vQ049
+| Q2VydGlmaWNhdGUtTFRELUNBLENOPURDMDEsQ049Q0RQLENOPVB1YmxpYyUyMEtl
+| eSUyMFNlcnZpY2VzLENOPVNlcnZpY2VzLENOPUNvbmZpZ3VyYXRpb24sREM9Y2Vy
+| dGlmaWNhdGUsREM9aHRiP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3Q/YmFzZT9v
+| YmplY3RDbGFzcz1jUkxEaXN0cmlidXRpb25Qb2ludDCByAYIKwYBBQUHAQEEgbsw
+| gbgwgbUGCCsGAQUFBzAChoGobGRhcDovLy9DTj1DZXJ0aWZpY2F0ZS1MVEQtQ0Es
+| Q049QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENOPVNlcnZpY2VzLENO
+| PUNvbmZpZ3VyYXRpb24sREM9Y2VydGlmaWNhdGUsREM9aHRiP2NBQ2VydGlmaWNh
+| dGU/YmFzZT9vYmplY3RDbGFzcz1jZXJ0aWZpY2F0aW9uQXV0aG9yaXR5MEAGA1Ud
+| EQQ5MDegHwYJKwYBBAGCNxkBoBIEEAdHN3ziVeJEnb0gcZhtQbWCFERDMDEuY2Vy
+| dGlmaWNhdGUuaHRiME4GCSsGAQQBgjcZAgRBMD+gPQYKKwYBBAGCNxkCAaAvBC1T
+| LTEtNS0yMS01MTU1Mzc2NjktNDIyMzY4NzE5Ni0zMjQ5NjkwNTgzLTEwMDAwDQYJ
+| KoZIhvcNAQELBQADggEBADf9n+npBVXr2Bxh9nOPq1POiKxl/Cn9Em6npJ9VQnfa
+| AeK01U/R/3vyx3h7wug2EOvJsboFSeBs+krqn8bWnfsjsfSD/AMjwwdxyLovWCYY
+| fXPm7kVnx0K3mzfSNWLM1JoMps9M0QztQuAF/d6oOIf6pYFugM2ceGHQ8V8wf8Z6
+| Ptx+HcwQM9m6RWu7adSRROl28uQO/vUEMvuEGrHN/xow6hcIpAKjrnzh2gKRp5Ye
+| q9FTqjjbbCKxpQ7y8+FMzmPDaeiSYXyDWcLnmC/rE8ClIjmZsOTuyITwEd6X9Jyw
+| D8Y7tXt0anuNiUVYBt2MpJMrCvNRWZxpckXZSAxJDlw=
+|_-----END CERTIFICATE-----
+3269/tcp open  globalcatLDAPssl? syn-ack ttl 127
+|_ssl-date: 2025-10-08T10:23:45+00:00; +8h00m00s from scanner time.
+| ssl-cert: Subject: commonName=DC01.certificate.htb
+| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1:<unsupported>, DNS:DC01.certificate.htb
+| Issuer: commonName=Certificate-LTD-CA/domainComponent=certificate
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2025-10-08T03:05:35
+| Not valid after:  2026-10-08T03:05:35
+| MD5:   5dbf:3452:0015:8f59:0306:97f0:c246:e3ba
+| SHA-1: 430c:2e23:2388:a6f6:e43b:b5ce:a586:8c98:af33:eff2
+| -----BEGIN CERTIFICATE-----
+| MIIGTDCCBTSgAwIBAgITWAAAABXfYBbZPXmbcwAAAAAAFTANBgkqhkiG9w0BAQsF
+| ADBPMRMwEQYKCZImiZPyLGQBGRYDaHRiMRswGQYKCZImiZPyLGQBGRYLY2VydGlm
+| aWNhdGUxGzAZBgNVBAMTEkNlcnRpZmljYXRlLUxURC1DQTAeFw0yNTEwMDgwMzA1
+| MzVaFw0yNjEwMDgwMzA1MzVaMB8xHTAbBgNVBAMTFERDMDEuY2VydGlmaWNhdGUu
+| aHRiMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0AP8+AhT/Eguz9W6
+| YQT5UJI27JvfoHVAJo43YLyYCxfrldol+5JgtPDAYvafe/hFy2rfhGRbPeffGoVF
+| Bqq1hhO7+b4nfPEWw7jN/gGPHxdHq1P1ejeqrv9Gl/6jE60df4RI1imN9oCtFIoS
+| fYWNHZkVoSMn6DUsDBHZ5oPaPRInRRvhKonqCaShsHJIGbGjMypzvxmsoDcYrdZe
+| wAkWVTbKeMPx/CROAh1LrsObh+UtHySx+2NCgXR+2H5NkK3T7Rl3EAi1majdL0AG
+| ZZdyiKPhOJmYvAXaM2rg+19V1nNC+A+NfJ8OD0Xr2wwczQ75U+jqZgF/GZA8gFVW
+| t0ttsQIDAQABo4IDTzCCA0swLwYJKwYBBAGCNxQCBCIeIABEAG8AbQBhAGkAbgBD
+| AG8AbgB0AHIAbwBsAGwAZQByMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcD
+| ATAOBgNVHQ8BAf8EBAMCBaAweAYJKoZIhvcNAQkPBGswaTAOBggqhkiG9w0DAgIC
+| AIAwDgYIKoZIhvcNAwQCAgCAMAsGCWCGSAFlAwQBKjALBglghkgBZQMEAS0wCwYJ
+| YIZIAWUDBAECMAsGCWCGSAFlAwQBBTAHBgUrDgMCBzAKBggqhkiG9w0DBzAdBgNV
+| HQ4EFgQUtQq8owzoDHJyyPWxhtnvNR2wM8IwHwYDVR0jBBgwFoAUOuH3UW3vrUoY
+| d0Gju7uF5m6Uc6IwgdEGA1UdHwSByTCBxjCBw6CBwKCBvYaBumxkYXA6Ly8vQ049
+| Q2VydGlmaWNhdGUtTFRELUNBLENOPURDMDEsQ049Q0RQLENOPVB1YmxpYyUyMEtl
+| eSUyMFNlcnZpY2VzLENOPVNlcnZpY2VzLENOPUNvbmZpZ3VyYXRpb24sREM9Y2Vy
+| dGlmaWNhdGUsREM9aHRiP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3Q/YmFzZT9v
+| YmplY3RDbGFzcz1jUkxEaXN0cmlidXRpb25Qb2ludDCByAYIKwYBBQUHAQEEgbsw
+| gbgwgbUGCCsGAQUFBzAChoGobGRhcDovLy9DTj1DZXJ0aWZpY2F0ZS1MVEQtQ0Es
+| Q049QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENOPVNlcnZpY2VzLENO
+| PUNvbmZpZ3VyYXRpb24sREM9Y2VydGlmaWNhdGUsREM9aHRiP2NBQ2VydGlmaWNh
+| dGU/YmFzZT9vYmplY3RDbGFzcz1jZXJ0aWZpY2F0aW9uQXV0aG9yaXR5MEAGA1Ud
+| EQQ5MDegHwYJKwYBBAGCNxkBoBIEEAdHN3ziVeJEnb0gcZhtQbWCFERDMDEuY2Vy
+| dGlmaWNhdGUuaHRiME4GCSsGAQQBgjcZAgRBMD+gPQYKKwYBBAGCNxkCAaAvBC1T
+| LTEtNS0yMS01MTU1Mzc2NjktNDIyMzY4NzE5Ni0zMjQ5NjkwNTgzLTEwMDAwDQYJ
+| KoZIhvcNAQELBQADggEBADf9n+npBVXr2Bxh9nOPq1POiKxl/Cn9Em6npJ9VQnfa
+| AeK01U/R/3vyx3h7wug2EOvJsboFSeBs+krqn8bWnfsjsfSD/AMjwwdxyLovWCYY
+| fXPm7kVnx0K3mzfSNWLM1JoMps9M0QztQuAF/d6oOIf6pYFugM2ceGHQ8V8wf8Z6
+| Ptx+HcwQM9m6RWu7adSRROl28uQO/vUEMvuEGrHN/xow6hcIpAKjrnzh2gKRp5Ye
+| q9FTqjjbbCKxpQ7y8+FMzmPDaeiSYXyDWcLnmC/rE8ClIjmZsOTuyITwEd6X9Jyw
+| D8Y7tXt0anuNiUVYBt2MpJMrCvNRWZxpckXZSAxJDlw=
+|_-----END CERTIFICATE-----
+5985/tcp open  http              syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+Service Info: Host: DC01; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled and required
+|_clock-skew: mean: 7h59m57s, deviation: 1s, median: 7h59m58s
+| smb2-time: 
+|   date: 2025-10-08T10:21:57
+|_  start_date: N/A
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 50770/tcp): CLEAN (Timeout)
+|   Check 2 (port 60669/tcp): CLEAN (Timeout)
+|   Check 3 (port 43669/udp): CLEAN (Timeout)
+|   Check 4 (port 53401/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+
+Read data files from: /usr/share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Oct  8 09:24:32 2025 -- 1 IP address (1 host up) scanned in 480.00 seconds

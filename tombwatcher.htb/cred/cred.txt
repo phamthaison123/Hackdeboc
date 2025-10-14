@@ -1,0 +1,6 @@
+henry:H3nry_987TGV!
+alfred:basketball
+ansible_dev$:bf8b11e301f7ba3fdc616e5d4fa01c30
+john:ad9324754583e3e42b55aad4d3b8d2bf
+cert_admin:f87ebf0febd9c4095c68a88928755773
+administrator:aad3b435b51404eeaad3b435b51404ee:f61db423bebe3328d33af26741afe5fc
