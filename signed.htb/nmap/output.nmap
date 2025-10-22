@@ -1,0 +1,66 @@
+# Nmap 7.95 scan initiated Wed Oct 15 14:04:58 2025 as: /usr/lib/nmap/nmap --privileged -sCV -vv -oA nmap/output 10.10.11.90
+Nmap scan report for 10.10.11.90
+Host is up, received echo-reply ttl 127 (0.29s latency).
+Scanned at 2025-10-15 14:04:59 +07 for 74s
+Not shown: 999 filtered tcp ports (no-response)
+PORT     STATE SERVICE  REASON          VERSION
+1433/tcp open  ms-sql-s syn-ack ttl 127 Microsoft SQL Server 2022 16.00.1000.00; RTM
+|_ssl-date: 2025-10-15T07:06:58+00:00; +45s from scanner time.
+| ms-sql-ntlm-info: 
+|   10.10.11.90:1433: 
+|     Target_Name: SIGNED
+|     NetBIOS_Domain_Name: SIGNED
+|     NetBIOS_Computer_Name: DC01
+|     DNS_Domain_Name: SIGNED.HTB
+|     DNS_Computer_Name: DC01.SIGNED.HTB
+|     DNS_Tree_Name: SIGNED.HTB
+|_    Product_Version: 10.0.17763
+| ms-sql-info: 
+|   10.10.11.90:1433: 
+|     Version: 
+|       name: Microsoft SQL Server 2022 RTM
+|       number: 16.00.1000.00
+|       Product: Microsoft SQL Server 2022
+|       Service pack level: RTM
+|       Post-SP patches applied: false
+|_    TCP port: 1433
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Issuer: commonName=SSL_Self_Signed_Fallback
+| Public Key type: rsa
+| Public Key bits: 3072
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2025-10-15T05:35:47
+| Not valid after:  2055-10-15T05:35:47
+| MD5:   5ac5:e43c:b1bc:5c06:6c3c:c4ee:96a3:3531
+| SHA-1: d251:3993:e5a6:f094:7f78:bc65:2276:5ec4:fbba:6183
+| -----BEGIN CERTIFICATE-----
+| MIIEADCCAmigAwIBAgIQTsg7Jk7BooxCGxYTWsw9mTANBgkqhkiG9w0BAQsFADA7
+| MTkwNwYDVQQDHjAAUwBTAEwAXwBTAGUAbABmAF8AUwBpAGcAbgBlAGQAXwBGAGEA
+| bABsAGIAYQBjAGswIBcNMjUxMDE1MDUzNTQ3WhgPMjA1NTEwMTUwNTM1NDdaMDsx
+| OTA3BgNVBAMeMABTAFMATABfAFMAZQBsAGYAXwBTAGkAZwBuAGUAZABfAEYAYQBs
+| AGwAYgBhAGMAazCCAaIwDQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBANAOOZGH
+| Si8uoD7Zyo1r90n4hsOaoVJf/XyhCZWeczAK8nogB6xnEjt+bLb6/cNTCps5wxCB
+| RDb8zWKnqxc7KQ6/cixDYbcFTPkLXVPRqTfAnZVA8vVcM+hZtxxS8ofimVsCGNRc
+| R8gmMeRBtoIRHnT8QUfYVMMK86kS4BVOBe2eJ4ld0tzuF8zegF6/NFNx/ij0lw1g
+| F4dRV4fLde3zLoXj6mRgUgsXjni5j9OCrY67JjgoqNLiM+HTWiwrKTZ0sV5VcKa9
+| XEUa0ZK1sW76xg/nFe6ZF8FCQTQJpiDzRrXleoHRuv/EOyiJsTB/kP1cgRKDXxnU
+| BxRn+Iox1JMBrhTh86N9vDrtLDV1yF+6QXui11X2W/aUF8RPG2xdgUk1Wghwr61u
+| Pn0s6gKzJmbv3Svj4yimrd/k3CHfknfvlobLhrSb4Ar2vMUcmLw0EjijBwBrYpeU
+| ZxZyGFFIvPxVm4xUBpyQYTRB3Mk1BMeMpUzQjaC7JZrZvmhsVxuXXLoqpQIDAQAB
+| MA0GCSqGSIb3DQEBCwUAA4IBgQBmY+h9grIewYBC9WX/XiUKbTreZJdy0PbnhMv7
+| q7wrsmCvIwRx2Ynq7YzwB8J2QieVV5HqfWOXpdGmT93j6KFXa+S97XJcP8EMegdW
+| zECJ3z2WNoolv7BJodgm+Uv7qT3gdq+IrPwZIQi2ppfXZLLkXVEtkTBos/IGK6AC
+| iotqdR8F51g6ucCWXFi8hQlXeXOWC8j2u0XIEhO7DmY+DNAacX26d3IUBP5amJRt
+| EMVksAfCJxxr/Cnq8TfFzL1G+fOC0h+Za/0PqdQ4V6CUc0o0zhRfl19wQoBpE2R1
+| We5rX2/4Nd1Tf5qzV0kmPvgVl6kvBTj0rJ4Pxlu77sYLvb4Ds4/VlWUGycttqcmY
+| wfBtpX0ZQVJDsqvoQTBbtL3/44nh4thf06/7xAyfpksO19rqF9/0kE0fQvnsctd6
+| E7V9rspb2iB0yTgF1meajeWf8Df4+Lvsze5tbWyK0WiJjEvMb6/MJewp0COaq9kY
+| pYDsjKPe4DLJaeTqHfqKJvt6AFk=
+|_-----END CERTIFICATE-----
+
+Host script results:
+|_clock-skew: mean: 45s, deviation: 0s, median: 44s
+
+Read data files from: /usr/share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Oct 15 14:06:13 2025 -- 1 IP address (1 host up) scanned in 74.97 seconds
