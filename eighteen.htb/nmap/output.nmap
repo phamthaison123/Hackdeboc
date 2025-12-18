@@ -1,0 +1,277 @@
+# Nmap 7.95 scan initiated Thu Nov 27 16:13:51 2025 as: /usr/lib/nmap/nmap --privileged -sCV -vv -oA nmap/output 10.10.11.96
+Nmap scan report for 10.10.11.96
+Host is up, received echo-reply ttl 127 (0.29s latency).
+Scanned at 2025-11-27 16:13:52 +07 for 132s
+Not shown: 984 filtered tcp ports (no-response)
+PORT     STATE SERVICE       REASON          VERSION
+22/tcp   open  ssh           syn-ack ttl 62  OpenSSH 8.9p1 Ubuntu 3ubuntu0.13 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 b3:a8:f7:5d:60:e8:66:16:ca:92:f6:76:ba:b8:33:c2 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLS2jzf8Eqy8cVa20hyZcem8rwAzeRhrMNEGdSUcFmv1FiQsfR4F9vZYkmfKViGIS3uL3X/6sJjzGxT1F/uPm/U=
+|   256 07:ef:11:a6:a0:7d:2b:4d:e8:68:79:1a:7b:a7:a9:cd (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFj9hE1zqO6TQ2JpjdgvMm6cr6s6eYsQKWlROV4G6q+4
+53/tcp   open  domain        syn-ack ttl 127 Simple DNS Plus
+80/tcp   open  http          syn-ack ttl 62  nginx 1.18.0 (Ubuntu)
+|_http-title: Did not follow redirect to http://fries.htb/
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+88/tcp   open  kerberos-sec  syn-ack ttl 127 Microsoft Windows Kerberos (server time: 2025-11-27 16:16:38Z)
+135/tcp  open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+139/tcp  open  netbios-ssn   syn-ack ttl 127 Microsoft Windows netbios-ssn
+389/tcp  open  ldap          syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: fries.htb0., Site: Default-First-Site-Name)
+|_ssl-date: 2025-11-27T16:18:12+00:00; +7h02m13s from scanner time.
+| ssl-cert: Subject: 
+| Subject Alternative Name: DNS:DC01.fries.htb, DNS:fries.htb, DNS:FRIES
+| Issuer: commonName=fries-DC01-CA/domainComponent=fries
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2025-11-18T05:39:19
+| Not valid after:  2105-11-18T05:39:19
+| MD5:   2410:a18d:14b3:7f5d:8e34:d144:0bac:6469
+| SHA-1: 3e84:1436:bb47:6ccd:f5ee:f805:cacd:47b6:6485:7e09
+| -----BEGIN CERTIFICATE-----
+| MIIF4zCCBMugAwIBAgITYQAAACgkBIm4DHPMcwABAAAAKDANBgkqhkiG9w0BAQsF
+| ADBEMRMwEQYKCZImiZPyLGQBGRYDaHRiMRUwEwYKCZImiZPyLGQBGRYFZnJpZXMx
+| FjAUBgNVBAMTDWZyaWVzLURDMDEtQ0EwIBcNMjUxMTE4MDUzOTE5WhgPMjEwNTEx
+| MTgwNTM5MTlaMAAwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDPpxCC
+| aZWpQqWfYbE5TXkYhqP9hxJvhmYaiPe+peUBqDXSVkdoBGOt600NkzwyjrFZIJLE
+| uceFPfxXD1fl1FENc+oEBbyt3EHEovDoJk+cY/45E6fe9C621W+z7bNvKbPxyuXa
+| xkxjkxClaIrYHMgk96M6zdvr9AOOiX8UhPqoSeogF8JRuYHmOBImuY2yqr1eRrvH
+| LfTfiHPUJR5W6TJ+Fhfz7N7tgo74ddW9WVT3sgvwbbHVUZOpr3XxBQdJRHyzv05Y
+| F+KIK3gtn1UMh7pX1NTTIKO3cOiivZCcw+uodamORjrFKloFKpFHJairIDP5MQvG
+| +ngp4j7SANPL4KntAgMBAAGjggMOMIIDCjA2BgkrBgEEAYI3FQcEKTAnBh8rBgEE
+| AYI3FQiFyocNqsACgomNG8Off4K99k2BAQEhAgFuAgEAMDIGA1UdJQQrMCkGCCsG
+| AQUFBwMCBggrBgEFBQcDAQYKKwYBBAGCNxQCAgYHKwYBBQIDBTAOBgNVHQ8BAf8E
+| BAMCBaAwQAYJKwYBBAGCNxUKBDMwMTAKBggrBgEFBQcDAjAKBggrBgEFBQcDATAM
+| BgorBgEEAYI3FAICMAkGBysGAQUCAwUwHQYDVR0OBBYEFHdnDz/EL+Qpk3Bq1tnE
+| qNe1qcmvMB8GA1UdIwQYMBaAFByH741F57ZStYVlo/TEvDOCG1KcMIHJBgNVHR8E
+| gcEwgb4wgbuggbiggbWGgbJsZGFwOi8vL0NOPWZyaWVzLURDMDEtQ0EoMSksQ049
+| REMwMSxDTj1DRFAsQ049UHVibGljJTIwS2V5JTIwU2VydmljZXMsQ049U2Vydmlj
+| ZXMsQ049Q29uZmlndXJhdGlvbixEQz1mcmllcyxEQz1odGI/Y2VydGlmaWNhdGVS
+| ZXZvY2F0aW9uTGlzdD9iYXNlP29iamVjdENsYXNzPWNSTERpc3RyaWJ1dGlvblBv
+| aW50MIG9BggrBgEFBQcBAQSBsDCBrTCBqgYIKwYBBQUHMAKGgZ1sZGFwOi8vL0NO
+| PWZyaWVzLURDMDEtQ0EsQ049QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2Vz
+| LENOPVNlcnZpY2VzLENOPUNvbmZpZ3VyYXRpb24sREM9ZnJpZXMsREM9aHRiP2NB
+| Q2VydGlmaWNhdGU/YmFzZT9vYmplY3RDbGFzcz1jZXJ0aWZpY2F0aW9uQXV0aG9y
+| aXR5MC4GA1UdEQEB/wQkMCKCDkRDMDEuZnJpZXMuaHRigglmcmllcy5odGKCBUZS
+| SUVTME4GCSsGAQQBgjcZAgRBMD+gPQYKKwYBBAGCNxkCAaAvBC1TLTEtNS0yMS04
+| NTgzMzgzNDYtMzg2MTAzMDUxNi0zOTc1MjQwNDcyLTEwMDAwDQYJKoZIhvcNAQEL
+| BQADggEBAHaVyk9K3fNRHrh+9cAwXe+jqDqd5iZPSuw6EVABWAdLg9L9r+9bejsO
+| Uin7De6fHFHn9EFNM6SJ4fM+g6gnEXwoIuPqmulcE+4zj7U52blMchO/TAFb23HS
+| 1bJqvBpy0il8TJfHg6cQs7/F4H5qOOHqTaeciKWnuUR4V3z69mhSMQezkVn7NrbG
+| tkH7x05OzZ4slQO3ac3IRkKeRNiD/3gaqmiPEOtHWq11ulKg5ezwvh3fOT9mMCXH
+| halJstv6Jh+Xse4ZFHey/dY4/oEqLcwHmnRzmEku2kJ5ND+N0N+oO0jfni6Lg7f5
+| LlBoD6A7Z0XQ77rtTrk5tPjER7aq66k=
+|_-----END CERTIFICATE-----
+443/tcp  open  ssl/http      syn-ack ttl 62  nginx 1.18.0 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+| tls-nextprotoneg: 
+|_  http/1.1
+| tls-alpn: 
+|_  http/1.1
+|_http-favicon: Unknown favicon MD5: F588322AAF157D82BB030AF1EFFD8CF9
+| ssl-cert: Subject: commonName=pwm.fries.htb/organizationName=Fries Foods LTD/stateOrProvinceName=Madrid/countryName=SP/emailAddress=web@fries.htb/organizationalUnitName=PWM Configuration/localityName=Madrid
+| Issuer: commonName=pwm.fries.htb/organizationName=Fries Foods LTD/stateOrProvinceName=Madrid/countryName=SP/emailAddress=web@fries.htb/organizationalUnitName=PWM Configuration/localityName=Madrid
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2025-06-01T22:06:09
+| Not valid after:  2026-06-01T22:06:09
+| MD5:   118d:ea17:3fba:3b65:28de:8e26:33e7:19f2
+| SHA-1: 5503:8aa8:0080:a853:ca73:87e3:b705:3fe8:b599:a855
+| -----BEGIN CERTIFICATE-----
+| MIIEGTCCAwGgAwIBAgIUW1MfdMXjo8YcnnMWmFQNMkXzkeAwDQYJKoZIhvcNAQEL
+| BQAwgZsxCzAJBgNVBAYTAlNQMQ8wDQYDVQQIDAZNYWRyaWQxDzANBgNVBAcMBk1h
+| ZHJpZDEYMBYGA1UECgwPRnJpZXMgRm9vZHMgTFREMRowGAYDVQQLDBFQV00gQ29u
+| ZmlndXJhdGlvbjEWMBQGA1UEAwwNcHdtLmZyaWVzLmh0YjEcMBoGCSqGSIb3DQEJ
+| ARYNd2ViQGZyaWVzLmh0YjAeFw0yNTA2MDEyMjA2MDlaFw0yNjA2MDEyMjA2MDla
+| MIGbMQswCQYDVQQGEwJTUDEPMA0GA1UECAwGTWFkcmlkMQ8wDQYDVQQHDAZNYWRy
+| aWQxGDAWBgNVBAoMD0ZyaWVzIEZvb2RzIExURDEaMBgGA1UECwwRUFdNIENvbmZp
+| Z3VyYXRpb24xFjAUBgNVBAMMDXB3bS5mcmllcy5odGIxHDAaBgkqhkiG9w0BCQEW
+| DXdlYkBmcmllcy5odGIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC6
+| 5V7dwNSFeKCUGSPuALuZyalQxLProDbZiTVQPJcNj6EmHLG1vxsqXpSrJhCb7dBh
+| FiuU36jvy5hbxTgYJ/kXaPO83wAjaTkWe4Dv1cPXTtqyUTx4X9k3W+cU9Rf/Sr4M
+| seK3Ub9+2TYaLxRNHwE+eQ+dJQ7/RQOeYZWGc9xEA4nlqwLpT52PCfftdMdZzxzG
+| XBhf0TYloX5hLPpFvl/YyZ2foBdbHbODoyXmnvXlboCMlxnpNywyw0pV7DAa4cNk
+| 2KZZXzHLvCZ+Ev1+yIt+19J6mFSdHMJjjKSB/fkMuXv2ZN3bTpbVkHz/ruaEG9u7
+| MTulepgoLY3XzEKMcq1zAgMBAAGjUzBRMB0GA1UdDgQWBBRaBJosucIruiAxu5z0
+| HgysCx0EpDAfBgNVHSMEGDAWgBRaBJosucIruiAxu5z0HgysCx0EpDAPBgNVHRMB
+| Af8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAOewUzyifCBtN0FEuDGBX1Z3KY
+| ih1AI0wHKhgbDl1HynxsrJ/W2dNtfNzRxDI7sHVN9YSulP+X06ByWwKpehlFbkiM
+| DsYhnFsKtlYK/i10hqOynZ18CFvKkvStqfXXgaAQHyL0u12UiOBDM6Jwm/nNKqXx
+| Qog6y2Hgi9WCclcYdwyKdiKdeiMz1b4yIIwDiZw01vGo/uyX+nDIsH/6OGbwI0yE
+| +ajXRFITQz7FjkcXpqxncpSdDETi5uGse89ebqfnP2TSHRSQSmxmkNO4ZP0Mn9u7
+| yQtdyRxIZrJPyWOeB7g3W/xo7BhUKs/tC8lAY3nA4PoDVMh49pyf/JNU8b8F
+|_-----END CERTIFICATE-----
+|_http-title: 400 The plain HTTP request was sent to HTTPS port
+|_ssl-date: TLS randomness does not represent time
+445/tcp  open  microsoft-ds? syn-ack ttl 127
+464/tcp  open  kpasswd5?     syn-ack ttl 127
+593/tcp  open  ncacn_http    syn-ack ttl 127 Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  ssl/ldap      syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: fries.htb0., Site: Default-First-Site-Name)
+|_ssl-date: 2025-11-27T16:18:11+00:00; +7h02m14s from scanner time.
+| ssl-cert: Subject: 
+| Subject Alternative Name: DNS:DC01.fries.htb, DNS:fries.htb, DNS:FRIES
+| Issuer: commonName=fries-DC01-CA/domainComponent=fries
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2025-11-18T05:39:19
+| Not valid after:  2105-11-18T05:39:19
+| MD5:   2410:a18d:14b3:7f5d:8e34:d144:0bac:6469
+| SHA-1: 3e84:1436:bb47:6ccd:f5ee:f805:cacd:47b6:6485:7e09
+| -----BEGIN CERTIFICATE-----
+| MIIF4zCCBMugAwIBAgITYQAAACgkBIm4DHPMcwABAAAAKDANBgkqhkiG9w0BAQsF
+| ADBEMRMwEQYKCZImiZPyLGQBGRYDaHRiMRUwEwYKCZImiZPyLGQBGRYFZnJpZXMx
+| FjAUBgNVBAMTDWZyaWVzLURDMDEtQ0EwIBcNMjUxMTE4MDUzOTE5WhgPMjEwNTEx
+| MTgwNTM5MTlaMAAwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDPpxCC
+| aZWpQqWfYbE5TXkYhqP9hxJvhmYaiPe+peUBqDXSVkdoBGOt600NkzwyjrFZIJLE
+| uceFPfxXD1fl1FENc+oEBbyt3EHEovDoJk+cY/45E6fe9C621W+z7bNvKbPxyuXa
+| xkxjkxClaIrYHMgk96M6zdvr9AOOiX8UhPqoSeogF8JRuYHmOBImuY2yqr1eRrvH
+| LfTfiHPUJR5W6TJ+Fhfz7N7tgo74ddW9WVT3sgvwbbHVUZOpr3XxBQdJRHyzv05Y
+| F+KIK3gtn1UMh7pX1NTTIKO3cOiivZCcw+uodamORjrFKloFKpFHJairIDP5MQvG
+| +ngp4j7SANPL4KntAgMBAAGjggMOMIIDCjA2BgkrBgEEAYI3FQcEKTAnBh8rBgEE
+| AYI3FQiFyocNqsACgomNG8Off4K99k2BAQEhAgFuAgEAMDIGA1UdJQQrMCkGCCsG
+| AQUFBwMCBggrBgEFBQcDAQYKKwYBBAGCNxQCAgYHKwYBBQIDBTAOBgNVHQ8BAf8E
+| BAMCBaAwQAYJKwYBBAGCNxUKBDMwMTAKBggrBgEFBQcDAjAKBggrBgEFBQcDATAM
+| BgorBgEEAYI3FAICMAkGBysGAQUCAwUwHQYDVR0OBBYEFHdnDz/EL+Qpk3Bq1tnE
+| qNe1qcmvMB8GA1UdIwQYMBaAFByH741F57ZStYVlo/TEvDOCG1KcMIHJBgNVHR8E
+| gcEwgb4wgbuggbiggbWGgbJsZGFwOi8vL0NOPWZyaWVzLURDMDEtQ0EoMSksQ049
+| REMwMSxDTj1DRFAsQ049UHVibGljJTIwS2V5JTIwU2VydmljZXMsQ049U2Vydmlj
+| ZXMsQ049Q29uZmlndXJhdGlvbixEQz1mcmllcyxEQz1odGI/Y2VydGlmaWNhdGVS
+| ZXZvY2F0aW9uTGlzdD9iYXNlP29iamVjdENsYXNzPWNSTERpc3RyaWJ1dGlvblBv
+| aW50MIG9BggrBgEFBQcBAQSBsDCBrTCBqgYIKwYBBQUHMAKGgZ1sZGFwOi8vL0NO
+| PWZyaWVzLURDMDEtQ0EsQ049QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2Vz
+| LENOPVNlcnZpY2VzLENOPUNvbmZpZ3VyYXRpb24sREM9ZnJpZXMsREM9aHRiP2NB
+| Q2VydGlmaWNhdGU/YmFzZT9vYmplY3RDbGFzcz1jZXJ0aWZpY2F0aW9uQXV0aG9y
+| aXR5MC4GA1UdEQEB/wQkMCKCDkRDMDEuZnJpZXMuaHRigglmcmllcy5odGKCBUZS
+| SUVTME4GCSsGAQQBgjcZAgRBMD+gPQYKKwYBBAGCNxkCAaAvBC1TLTEtNS0yMS04
+| NTgzMzgzNDYtMzg2MTAzMDUxNi0zOTc1MjQwNDcyLTEwMDAwDQYJKoZIhvcNAQEL
+| BQADggEBAHaVyk9K3fNRHrh+9cAwXe+jqDqd5iZPSuw6EVABWAdLg9L9r+9bejsO
+| Uin7De6fHFHn9EFNM6SJ4fM+g6gnEXwoIuPqmulcE+4zj7U52blMchO/TAFb23HS
+| 1bJqvBpy0il8TJfHg6cQs7/F4H5qOOHqTaeciKWnuUR4V3z69mhSMQezkVn7NrbG
+| tkH7x05OzZ4slQO3ac3IRkKeRNiD/3gaqmiPEOtHWq11ulKg5ezwvh3fOT9mMCXH
+| halJstv6Jh+Xse4ZFHey/dY4/oEqLcwHmnRzmEku2kJ5ND+N0N+oO0jfni6Lg7f5
+| LlBoD6A7Z0XQ77rtTrk5tPjER7aq66k=
+|_-----END CERTIFICATE-----
+2179/tcp open  vmrdp?        syn-ack ttl 127
+3268/tcp open  ldap          syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: fries.htb0., Site: Default-First-Site-Name)
+| ssl-cert: Subject: 
+| Subject Alternative Name: DNS:DC01.fries.htb, DNS:fries.htb, DNS:FRIES
+| Issuer: commonName=fries-DC01-CA/domainComponent=fries
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2025-11-18T05:39:19
+| Not valid after:  2105-11-18T05:39:19
+| MD5:   2410:a18d:14b3:7f5d:8e34:d144:0bac:6469
+| SHA-1: 3e84:1436:bb47:6ccd:f5ee:f805:cacd:47b6:6485:7e09
+| -----BEGIN CERTIFICATE-----
+| MIIF4zCCBMugAwIBAgITYQAAACgkBIm4DHPMcwABAAAAKDANBgkqhkiG9w0BAQsF
+| ADBEMRMwEQYKCZImiZPyLGQBGRYDaHRiMRUwEwYKCZImiZPyLGQBGRYFZnJpZXMx
+| FjAUBgNVBAMTDWZyaWVzLURDMDEtQ0EwIBcNMjUxMTE4MDUzOTE5WhgPMjEwNTEx
+| MTgwNTM5MTlaMAAwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDPpxCC
+| aZWpQqWfYbE5TXkYhqP9hxJvhmYaiPe+peUBqDXSVkdoBGOt600NkzwyjrFZIJLE
+| uceFPfxXD1fl1FENc+oEBbyt3EHEovDoJk+cY/45E6fe9C621W+z7bNvKbPxyuXa
+| xkxjkxClaIrYHMgk96M6zdvr9AOOiX8UhPqoSeogF8JRuYHmOBImuY2yqr1eRrvH
+| LfTfiHPUJR5W6TJ+Fhfz7N7tgo74ddW9WVT3sgvwbbHVUZOpr3XxBQdJRHyzv05Y
+| F+KIK3gtn1UMh7pX1NTTIKO3cOiivZCcw+uodamORjrFKloFKpFHJairIDP5MQvG
+| +ngp4j7SANPL4KntAgMBAAGjggMOMIIDCjA2BgkrBgEEAYI3FQcEKTAnBh8rBgEE
+| AYI3FQiFyocNqsACgomNG8Off4K99k2BAQEhAgFuAgEAMDIGA1UdJQQrMCkGCCsG
+| AQUFBwMCBggrBgEFBQcDAQYKKwYBBAGCNxQCAgYHKwYBBQIDBTAOBgNVHQ8BAf8E
+| BAMCBaAwQAYJKwYBBAGCNxUKBDMwMTAKBggrBgEFBQcDAjAKBggrBgEFBQcDATAM
+| BgorBgEEAYI3FAICMAkGBysGAQUCAwUwHQYDVR0OBBYEFHdnDz/EL+Qpk3Bq1tnE
+| qNe1qcmvMB8GA1UdIwQYMBaAFByH741F57ZStYVlo/TEvDOCG1KcMIHJBgNVHR8E
+| gcEwgb4wgbuggbiggbWGgbJsZGFwOi8vL0NOPWZyaWVzLURDMDEtQ0EoMSksQ049
+| REMwMSxDTj1DRFAsQ049UHVibGljJTIwS2V5JTIwU2VydmljZXMsQ049U2Vydmlj
+| ZXMsQ049Q29uZmlndXJhdGlvbixEQz1mcmllcyxEQz1odGI/Y2VydGlmaWNhdGVS
+| ZXZvY2F0aW9uTGlzdD9iYXNlP29iamVjdENsYXNzPWNSTERpc3RyaWJ1dGlvblBv
+| aW50MIG9BggrBgEFBQcBAQSBsDCBrTCBqgYIKwYBBQUHMAKGgZ1sZGFwOi8vL0NO
+| PWZyaWVzLURDMDEtQ0EsQ049QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2Vz
+| LENOPVNlcnZpY2VzLENOPUNvbmZpZ3VyYXRpb24sREM9ZnJpZXMsREM9aHRiP2NB
+| Q2VydGlmaWNhdGU/YmFzZT9vYmplY3RDbGFzcz1jZXJ0aWZpY2F0aW9uQXV0aG9y
+| aXR5MC4GA1UdEQEB/wQkMCKCDkRDMDEuZnJpZXMuaHRigglmcmllcy5odGKCBUZS
+| SUVTME4GCSsGAQQBgjcZAgRBMD+gPQYKKwYBBAGCNxkCAaAvBC1TLTEtNS0yMS04
+| NTgzMzgzNDYtMzg2MTAzMDUxNi0zOTc1MjQwNDcyLTEwMDAwDQYJKoZIhvcNAQEL
+| BQADggEBAHaVyk9K3fNRHrh+9cAwXe+jqDqd5iZPSuw6EVABWAdLg9L9r+9bejsO
+| Uin7De6fHFHn9EFNM6SJ4fM+g6gnEXwoIuPqmulcE+4zj7U52blMchO/TAFb23HS
+| 1bJqvBpy0il8TJfHg6cQs7/F4H5qOOHqTaeciKWnuUR4V3z69mhSMQezkVn7NrbG
+| tkH7x05OzZ4slQO3ac3IRkKeRNiD/3gaqmiPEOtHWq11ulKg5ezwvh3fOT9mMCXH
+| halJstv6Jh+Xse4ZFHey/dY4/oEqLcwHmnRzmEku2kJ5ND+N0N+oO0jfni6Lg7f5
+| LlBoD6A7Z0XQ77rtTrk5tPjER7aq66k=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2025-11-27T16:18:11+00:00; +7h02m13s from scanner time.
+3269/tcp open  ssl/ldap      syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: fries.htb0., Site: Default-First-Site-Name)
+|_ssl-date: 2025-11-27T16:18:11+00:00; +7h02m13s from scanner time.
+| ssl-cert: Subject: 
+| Subject Alternative Name: DNS:DC01.fries.htb, DNS:fries.htb, DNS:FRIES
+| Issuer: commonName=fries-DC01-CA/domainComponent=fries
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2025-11-18T05:39:19
+| Not valid after:  2105-11-18T05:39:19
+| MD5:   2410:a18d:14b3:7f5d:8e34:d144:0bac:6469
+| SHA-1: 3e84:1436:bb47:6ccd:f5ee:f805:cacd:47b6:6485:7e09
+| -----BEGIN CERTIFICATE-----
+| MIIF4zCCBMugAwIBAgITYQAAACgkBIm4DHPMcwABAAAAKDANBgkqhkiG9w0BAQsF
+| ADBEMRMwEQYKCZImiZPyLGQBGRYDaHRiMRUwEwYKCZImiZPyLGQBGRYFZnJpZXMx
+| FjAUBgNVBAMTDWZyaWVzLURDMDEtQ0EwIBcNMjUxMTE4MDUzOTE5WhgPMjEwNTEx
+| MTgwNTM5MTlaMAAwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDPpxCC
+| aZWpQqWfYbE5TXkYhqP9hxJvhmYaiPe+peUBqDXSVkdoBGOt600NkzwyjrFZIJLE
+| uceFPfxXD1fl1FENc+oEBbyt3EHEovDoJk+cY/45E6fe9C621W+z7bNvKbPxyuXa
+| xkxjkxClaIrYHMgk96M6zdvr9AOOiX8UhPqoSeogF8JRuYHmOBImuY2yqr1eRrvH
+| LfTfiHPUJR5W6TJ+Fhfz7N7tgo74ddW9WVT3sgvwbbHVUZOpr3XxBQdJRHyzv05Y
+| F+KIK3gtn1UMh7pX1NTTIKO3cOiivZCcw+uodamORjrFKloFKpFHJairIDP5MQvG
+| +ngp4j7SANPL4KntAgMBAAGjggMOMIIDCjA2BgkrBgEEAYI3FQcEKTAnBh8rBgEE
+| AYI3FQiFyocNqsACgomNG8Off4K99k2BAQEhAgFuAgEAMDIGA1UdJQQrMCkGCCsG
+| AQUFBwMCBggrBgEFBQcDAQYKKwYBBAGCNxQCAgYHKwYBBQIDBTAOBgNVHQ8BAf8E
+| BAMCBaAwQAYJKwYBBAGCNxUKBDMwMTAKBggrBgEFBQcDAjAKBggrBgEFBQcDATAM
+| BgorBgEEAYI3FAICMAkGBysGAQUCAwUwHQYDVR0OBBYEFHdnDz/EL+Qpk3Bq1tnE
+| qNe1qcmvMB8GA1UdIwQYMBaAFByH741F57ZStYVlo/TEvDOCG1KcMIHJBgNVHR8E
+| gcEwgb4wgbuggbiggbWGgbJsZGFwOi8vL0NOPWZyaWVzLURDMDEtQ0EoMSksQ049
+| REMwMSxDTj1DRFAsQ049UHVibGljJTIwS2V5JTIwU2VydmljZXMsQ049U2Vydmlj
+| ZXMsQ049Q29uZmlndXJhdGlvbixEQz1mcmllcyxEQz1odGI/Y2VydGlmaWNhdGVS
+| ZXZvY2F0aW9uTGlzdD9iYXNlP29iamVjdENsYXNzPWNSTERpc3RyaWJ1dGlvblBv
+| aW50MIG9BggrBgEFBQcBAQSBsDCBrTCBqgYIKwYBBQUHMAKGgZ1sZGFwOi8vL0NO
+| PWZyaWVzLURDMDEtQ0EsQ049QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2Vz
+| LENOPVNlcnZpY2VzLENOPUNvbmZpZ3VyYXRpb24sREM9ZnJpZXMsREM9aHRiP2NB
+| Q2VydGlmaWNhdGU/YmFzZT9vYmplY3RDbGFzcz1jZXJ0aWZpY2F0aW9uQXV0aG9y
+| aXR5MC4GA1UdEQEB/wQkMCKCDkRDMDEuZnJpZXMuaHRigglmcmllcy5odGKCBUZS
+| SUVTME4GCSsGAQQBgjcZAgRBMD+gPQYKKwYBBAGCNxkCAaAvBC1TLTEtNS0yMS04
+| NTgzMzgzNDYtMzg2MTAzMDUxNi0zOTc1MjQwNDcyLTEwMDAwDQYJKoZIhvcNAQEL
+| BQADggEBAHaVyk9K3fNRHrh+9cAwXe+jqDqd5iZPSuw6EVABWAdLg9L9r+9bejsO
+| Uin7De6fHFHn9EFNM6SJ4fM+g6gnEXwoIuPqmulcE+4zj7U52blMchO/TAFb23HS
+| 1bJqvBpy0il8TJfHg6cQs7/F4H5qOOHqTaeciKWnuUR4V3z69mhSMQezkVn7NrbG
+| tkH7x05OzZ4slQO3ac3IRkKeRNiD/3gaqmiPEOtHWq11ulKg5ezwvh3fOT9mMCXH
+| halJstv6Jh+Xse4ZFHey/dY4/oEqLcwHmnRzmEku2kJ5ND+N0N+oO0jfni6Lg7f5
+| LlBoD6A7Z0XQ77rtTrk5tPjER7aq66k=
+|_-----END CERTIFICATE-----
+5985/tcp open  http          syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+|_http-server-header: Microsoft-HTTPAPI/2.0
+Service Info: Host: DC01; OSs: Linux, Windows; CPE: cpe:/o:linux:linux_kernel, cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 7h02m13s, deviation: 0s, median: 7h02m12s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 46245/tcp): CLEAN (Timeout)
+|   Check 2 (port 65434/tcp): CLEAN (Timeout)
+|   Check 3 (port 23943/udp): CLEAN (Timeout)
+|   Check 4 (port 25008/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-time: 
+|   date: 2025-11-27T16:17:27
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled and required
+
+Read data files from: /usr/share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Nov 27 16:16:04 2025 -- 1 IP address (1 host up) scanned in 132.51 seconds

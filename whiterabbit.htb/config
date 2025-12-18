@@ -1,0 +1,4 @@
+Host whiterabbit
+  HostName whiterabbit.htb
+  Port 2222
+  User bob
